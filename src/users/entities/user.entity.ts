@@ -1,4 +1,8 @@
+import { ApiProperty } from '@nestjs/swagger';
+
 export class User {
+  @ApiProperty()
   id: number;
-  name: string;
+  @ApiProperty({ required: false })
+  name?: string;
 }
